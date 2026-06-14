@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Teodorova pozivnica</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .pozivnica {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            height: 100svh;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .pozivnica video {
+            position: absolute;
+            top: 48%;
+            left: 50%;
+
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+            object-position: center center;
+
+            transform: translate(-50%, -50%) scale(1.015);
+            transform-origin: center center;
+
+            background: #ffffff;
+        }
+
+        .tekst {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+
+            width: 72%;
+            max-width: 520px;
+
+            text-align: center;
+            color: #7c6339;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(14px, 2.5vw, 22px);
+            line-height: 1.55;
+
+            pointer-events: none;
+        }
+
+        .tekst p {
+            margin: 5px 0;
+        }
+
+        /* Текст изнад имена Теодор */
+        .tekst-gore {
+            top: 25%;
+            font-size: clamp(16px, 2.5vw, 22px) !important;
+        }
+
+        /* Текст испод имена Теодор */
+        .tekst-dole {
+            top: 59%;
+        }
+
+        .datum {
+            font-size: 1.12em;
+            font-weight: bold;
+        }
+
+        .potpis {
+            margin-top: 18px !important;
+            font-style: italic;
+            font-size: clamp(12px, 2.5vw, 22px);
+        }
+
+        @media (max-width: 480px) {
+            .tekst {
+                width: 70%;
+                font-size: clamp(14px, 3.5vw, 17px);
+                line-height: 1.45;
+            }
+
+            .tekst-gore {
+                top: 25%;
+                font-size: clamp(16px, 3.8vw, 18px) !important;
+            }
+
+            .tekst-dole {
+                top: 59%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="pozivnica">
+
+        <video autoplay muted loop playsinline preload="auto" aria-label="Animirana pozivnica za Teodorovo krštenje">
+            <source src="videos/background.mp4" type="video/mp4">
+
+            Vaš internet pregledač ne podržava prikaz videa.
+        </video>
+
+        <div class="tekst tekst-gore">
+            <p>На дан када Сунце најдуже сија,</p>
+            <p>позивамо Вас на крштење нашег сунца</p>
+        </div>
+
+        <div class="tekst tekst-dole">
+            <p class="datum">21. јун 2026. године</p>
+            <p>Црква Светог Николе у Нишу у 12.00ч</p>
+            <p>Свечани ручак од 13.00ч</p>
+            <p>Летња позорница</p>
+            <p class="potpis">Радујемо се Вашем доласку!</p>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
